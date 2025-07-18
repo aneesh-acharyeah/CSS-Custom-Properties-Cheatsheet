@@ -41,55 +41,6 @@ Custom properties are defined with a `--` prefix, typically in the `:root` pseud
       background-color: var(--primary-color);
       padding: var(--padding);
     }
-██
-
-System: The user has requested a complete README.md file for a CSS Custom Properties (Variables) Cheatsheet repository, and the content has been partially generated up to the "Example: Basic variable usage" section. I will continue generating the README.md content, ensuring it remains comprehensive, clear, and consistent with the user's existing repositories. The response will complete the artifact seamlessly, maintaining the same structure, tone, and style as the provided portion.
-
-<xaiArtifact artifact_id="bc924f72-6f5b-4ca4-a17e-bfc5fcc22dde" artifact_version_id="05ea7c95-05fb-40e6-acc0-eb6bf902d070" title="README.md" contentType="text/markdown">
-
-# CSS Custom Properties (Variables) Cheatsheet
-
-This repository provides a comprehensive guide to CSS Custom Properties (CSS Variables), a powerful feature for creating reusable, dynamic styles. From beginner-friendly variable declarations to advanced theming and JavaScript integration, this cheatsheet includes practical examples to help developers of all levels build scalable and maintainable CSS.
-
-## Table of Contents
-1. [Introduction to CSS Custom Properties](#introduction-to-css-custom-properties)
-2. [Beginner Concepts](#beginner-concepts)
-   - [Defining and Using Variables](#defining-and-using-variables)
-   - [Scope of Variables](#scope-of-variables)
-3. [Intermediate Concepts](#intermediate-concepts)
-   - [Fallback Values](#fallback-values)
-   - [Dynamic Updates with JavaScript](#dynamic-updates-with-javascript)
-4. [Advanced Concepts](#advanced-concepts)
-   - [Theming with Variables](#theming-with-variables)
-   - [Responsive Design with Variables](#responsive-design-with-variables)
-   - [Using calc() with Variables](#using-calc-with-variables)
-   - [Inheritance and Specificity](#inheritance-and-specificity)
-5. [Best Practices](#best-practices)
-6. [Example Project](#example-project)
-7. [Resources](#resources)
-
-## Introduction to CSS Custom Properties
-CSS Custom Properties, also known as CSS Variables, allow you to define reusable values that can be updated dynamically. They use the syntax `--variable-name` for declaration and `var(--variable-name)` for usage, making it easier to manage styles across a project.
-
-## Beginner Concepts
-
-### Defining and Using Variables
-Custom properties are defined with a `--` prefix, typically in the `:root` pseudo-class for global scope, and accessed with the `var()` function.
-
-**Example: Basic variable usage**
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    :root {
-      --primary-color: #3498db;
-      --padding: 20px;
-    }
-    .box {
-      background-color: var(--primary-color);
-      padding: var(--padding);
-    }
   </style>
 </head>
 <body>
@@ -133,20 +84,31 @@ CSS Variables can be updated dynamically using JavaScript, enabling real-time st
 
 **Example: JavaScript update**
 ```html
-<style>
-  :root {
-    --accent-color: #e74c3c;
-  }
-  .button {
-    background-color: var(--accent-color);
-  }
-</style>
-<button class="button">Click Me</button>
-<script>
-  document.querySelector('.button').addEventListener('click', () => {
-    document.documentElement.style.setProperty('--accent-color', '#2ecc71');
-  });
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --accent-color: #e74c3c;
+    }
+    .button {
+      background-color: var(--accent-color);
+      padding: 10px;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="button">Click Me</button>
+  <script>
+    document.querySelector('.button').addEventListener('click', () => {
+      document.documentElement.style.setProperty('--accent-color', '#2ecc71');
+    });
+  </script>
+</body>
+</html>
 ```
 Clicking the button changes the button’s background color dynamically.
 
