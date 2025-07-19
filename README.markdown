@@ -1,4 +1,4 @@
-# CSS Custom Properties (Variables) Cheatsheet
+# CSS Custom Properties (Variables) Cheatsheet 
 
 This repository provides a comprehensive guide to CSS Custom Properties (CSS Variables), a powerful feature for creating reusable, dynamic styles. From beginner-friendly variable declarations to advanced theming and JavaScript integration, this cheatsheet includes practical examples to help developers of all levels build scalable and maintainable CSS.
 
